@@ -29,8 +29,18 @@ public class CursoService {
 	}
 	
 	
-	/*optional = estrutura que o spring entende 
-	 * que irei trabalhar com ela depois*/
+	/* OPTIONAL = estrutura que o spring entende 
+	 * que irei trabalhar com ela depois
+	 * 
+	 * O Optional é uma classe do Java (a partir da versão 8) 
+	 * que atua como uma "caixa" ou container para um objeto. 
+	 * O principal objetivo do Optional é ajudar a evitar o 
+	 * erro mais comum e temido em Java: o NullPointerException.
+
+		Em vez de um método retornar null (ou "nada"), ele retorna 
+		um Optional que pode conter o objeto que você procura ou 
+		estar vazio.*/
+	
 	public Optional<Curso> buscarCursoPorId(Long id){
 		return cursoRepository.findById(id);
 	}
